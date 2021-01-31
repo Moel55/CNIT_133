@@ -1,3 +1,4 @@
+/* set background image on the body */
 body {
     background-image: url("../images/white-brick.jpg");
     background-repeat: no-repeat;
