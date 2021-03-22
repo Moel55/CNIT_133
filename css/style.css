@@ -61,21 +61,36 @@ header h1 {
 }
 
 .form {
-    
     background-color: #ABD6DFFF;
     border-radius: 10px;
     border: none;
     padding: 10px;
+   
 }
 
 textarea, input {
     margin-bottom: 5px;
     border-radius: 5px;
+    text-align: right;
 }
 
 button {
     margin-bottom: 5px;
     border-radius: 5px;
+}
+
+/* homework two part two form styling */
+
+.form2 {
+    background-image: url("../images/grey-wood.jpg");
+    opacity: 0.78;
+    box-shadow: 3px 6px 10px rgb(8, 24, 38);
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    color: #511c76;
+    text-align: right;
+    font-weight: 600;
 }
 
 /* show flex in navigation */
@@ -118,7 +133,9 @@ button {
     text-align: center;
     padding: 0 20px 0 0;
 }
-
+.home {
+    background-color: #fff;;
+}
 /* remove right margin from last list item */
 .navi ul li:last-child a {
     margin-right: 0;
@@ -131,7 +148,9 @@ button {
     flex-wrap: wrap;
     
 }
-
+#hw2 {
+   justify-content: center;
+}
 .hw {
     flex-basis: auto;
     margin: 20px;
@@ -152,6 +171,17 @@ button {
 }
 
 .form {
+    flex: 3;
+}
+
+/* homework 2 part 2 styling */
+.form2-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form2 {
     flex: 3;
 }
 
