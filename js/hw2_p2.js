@@ -9,13 +9,7 @@ function numberType() {
     num2 = parseInt(n2);
     num3 = parseInt(n3);
 
-    typeof(num1 === 'number') ||
-    typeof(num2 === 'number') ||
-    typeof(num3 === 'number') 
-    ? threeNumbers()
-    : document.getElementById('result').value = 
-    "Please enter a number.";
-    
+    threeNumbers()    
 }
 
 function threeNumbers() {
