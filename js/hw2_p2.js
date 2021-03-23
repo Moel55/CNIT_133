@@ -27,9 +27,9 @@ function threeNumbers() {
         + "\nThe second number is " + (isValidNumber(num2) ? "valid" : "invalid") 
         + "\nThe third number is " + (isValidNumber(num3) ? "valid" : "invalid")
     }
-  document.getElementById('result').classList.add('fade');
-  setTimeout(() => { document.getElementById('result').classList.remove('fade');  
-  document.getElementById('result').value = '';}, 5000) 
+
+   $("#fade").click(function() { $('textarea').fadeTo("slow", 0.7) })
+  
 }
 
 function isValidNumber(number) {
