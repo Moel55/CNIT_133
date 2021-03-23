@@ -9,14 +9,12 @@ function numberType() {
     num2 = parseInt(n2);
     num3 = parseInt(n3);
 
-    let myNum = [num1, num1, num1];
-
-    myNum.forEach(nums => {
-        (typeof nums === "number")
-        ? threeNumbers()
-        : document.getElementById('result').value = 
-        nums + " is not a number, Please enter a number.";
-    })
+    typeof(num1 === 'number') ||
+    typeof(num2 === 'number') ||
+    typeof(num3 === 'number') 
+    ? threeNumbers()
+    : document.getElementById('result').value = 
+    "Please enter a number.";
     
 }
 
@@ -25,7 +23,21 @@ function threeNumbers() {
     let myAverage = sum / 3;
     let average = myAverage.toFixed(2);
     let product = num1 * num2 * num3;
-   
-    document.getElementById('result').value = 
-    ("The sum is " + sum + "\nThe average is " + average + "\nThe product is " + product);
+
+    if(isValidNumber(sum) && isValidNumber(average) && isValidNumber(product)) {
+        document.getElementById('result').value = 
+        ("The sum is " + sum + "\nThe average is " + average + "\nThe product is " + product);
+    }
+    else {
+        document.getElementById('result').value = "The first number is " + (isValidNumber(num1) ? "valid" : "invalid") 
+        + "\nThe second number is " + (isValidNumber(num2) ? "valid" : "invalid") 
+        + "\nThe third number is " + (isValidNumber(num3) ? "valid" : "invalid")
+    }
+  document.getElementById('result').classList.add('fade');
+  setTimeout(() => { document.getElementById('result').classList.remove('fade');  
+  document.getElementById('result').value = '';}, 5000) 
+}
+
+function isValidNumber(number) {
+    return number || number === 0;
 }

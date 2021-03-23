@@ -93,6 +93,14 @@ button {
     font-weight: 600;
 }
 
+/* fade class */
+.fade {
+    opacity: 0;
+}
+#result {
+    transition: opacity 4s;
+    transition-delay: 2s;
+}
 /* show flex in navigation */
 .group-header {
     display: flex;
