@@ -23,12 +23,13 @@ function threeNumbers() {
         ("The sum is " + sum + "\nThe average is " + average + "\nThe product is " + product);
     }
     else {
-        document.getElementById('result').value = "The first number is " + (isValidNumber(num1) ? "valid" : "invalid") 
+        document.getElementById('result').value = 
+        "The first number is " + (isValidNumber(num1) ? "valid" : "invalid") 
         + "\nThe second number is " + (isValidNumber(num2) ? "valid" : "invalid") 
         + "\nThe third number is " + (isValidNumber(num3) ? "valid" : "invalid")
     }
 
-   $("#fade").click(function() { $('textarea').fadeTo("slow", 0.7) })
+   $("#fade").click(() => { $('textarea').fadeTo("slow", 0.7) })
   
 }
 
